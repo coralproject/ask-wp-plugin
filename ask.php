@@ -61,16 +61,15 @@ class Ask_Plugin {
   }
 
   public function section_callback($arguments) {
-    echo 'Hello World';
   }
 
   public function base_url_callback($arguments) {
-    echo '<input width="400px" name="base_url" placeholder="'. $arguments['placeholder'] .'" id="base_url" type="url" value="' . get_option( 'base_url' ) . '" />';
+    echo '<input style="width: 600px; height: 40px;" name="base_url" placeholder="'. $arguments['placeholder'] .'" id="base_url" type="url" value="' . get_option( 'base_url' ) . '" />';
   }
 
 
   public function admin_url_callback($arguments) {
-    echo '<input width="400px" name="admin_url" placeholder="'. $arguments['placeholder'] .'" id="admin_url" type="url" value="' . get_option( 'admin_url' ) . '" />';
+    echo '<input style="width: 600px; height: 40px;" name="admin_url" placeholder="'. $arguments['placeholder'] .'" id="admin_url" type="url" value="' . get_option( 'admin_url' ) . '" />';
   }
 
   public function render_settings_page() { ?>
