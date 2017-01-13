@@ -86,7 +86,7 @@ class Ask_Plugin {
 
   public function admin_url_callback($arguments) { ?>
     <p>You can also optionally manage your forms in Wordpress, by providing the URL where your Ask admin is located:</p>
-    <input style="width: 600px; height: 40px;" name="admin_url" placeholder="<?php echo $arguments['placeholder']; ?>" id="admin_url" type="url" value="<?php echo get_option( 'admin_url' ); ?>" />';
+    <input style="width: 600px; height: 40px;" name="admin_url" placeholder="<?php echo $arguments['placeholder']; ?>" id="admin_url" type="url" value="<?php echo get_option( 'admin_url' ); ?>" />
   <?php }
 
   public function render_settings_page() { ?>
