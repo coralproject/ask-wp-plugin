@@ -20,14 +20,15 @@ class Ask_Plugin {
   }
 
   public function create_settings_page () {
-    add_submenu_page('options-general.php', 'Ask Settings', 'Ask Settings', 'manage_options', 'ask-settings', array( $this, 'render_settings_page' ), 'dashicons-admin-plugins', 100);
+    add_menu_page('Ask Forms', 'Ask Forms', 'manage_options', 'ask-forms', array( $this, 'render_settings_page' ), 'dashicons-list-view', 100);
+    add_submenu_page('ask-forms', 'Ask Settings', 'Ask Settings', 'manage_options', 'ask-forms', array( $this, 'render_settings_page' ), 'dashicons-admin-plugins', 100);
     if (get_option('admin_url')) {
-      add_submenu_page('options-general.php', 'Ask Admin', 'Ask Admin', 'manage_options', 'ask-admin', array( $this, 'render_admin_page' ), 'dashicons-admin-plugins', 100);
+      add_submenu_page('ask-forms', 'Ask Admin', 'Ask Admin', 'manage_options', 'ask-admin', array( $this, 'render_admin_page' ), 'dashicons-admin-plugins', 100);
     }
   }
 
   public function setup_sections() {
-    add_settings_section('integration', 'Integration configuration', array( $this, 'section_callback' ), 'ask-settings' );
+    add_settings_section('integration', 'About Ask', array( $this, 'section_callback' ), 'ask-settings' );
   }
 
   public function setup_fields () {
@@ -38,7 +39,7 @@ class Ask_Plugin {
         'section' => 'integration',
         'type' => 'url',
         'options' => false,
-        'placeholder' => 'https://',
+        'placeholder' => 'https://s3-us-west-2.amazonaws.com/my-s3-bucket/',
         'default' => '',
         'callback' => 'base_url_callback'
       ),
@@ -48,7 +49,7 @@ class Ask_Plugin {
         'section' => 'integration',
         'type' => 'url',
         'options' => false,
-        'placeholder' => 'https://',
+        'placeholder' => 'https://ask.mydomain.com',
         'default' => '',
         'callback' => 'admin_url_callback'
       )
@@ -60,17 +61,33 @@ class Ask_Plugin {
     }
   }
 
-  public function section_callback($arguments) {
-  }
+  public function section_callback($arguments) { ?>
+    <p>Ask is a form tool, built specifically for journalists.</p>
+    <p>Ask lets you easily create embeddable forms, manage submissions, and display galleries of the best responses. It’s fast, flexible, and you control the design and the data.</p>
+    <p>You can find out how to install and manage Ask <a href="https://docs.coralproject.net/products/ask/">here</a>.</p>
+    <p>Ask is an open source product brought to you by The Coral Project. Find out more about Coral and the tools we build <a href="https://coralproject.net">here</a>.</p>
 
-  public function base_url_callback($arguments) {
-    echo '<input style="width: 600px; height: 40px;" name="base_url" placeholder="'. $arguments['placeholder'] .'" id="base_url" type="url" value="' . get_option( 'base_url' ) . '" />';
-  }
+    <h2>Instructions</h2>
+    <p>Use your Ask shortcode in any post or page where you want to embed an Ask form:</p>
+    <p><code>[ask-form id="1234567890abcdefghij"]</code></p>
+    <p>You can find your Ask form ID in the URL of your form, ex: <strong>https://ask.yourdomain.com/forms/1234567890abcdefghij</strong></p>
+
+    <h2>Ask Settings</h2>
+    <p>Questions/feedback? Reach out to us on <a href="https://twitter.com/coralproject">Twitter</a> or join our <a href="https://community.coralproject.net/">Community</a>.
+    <p>You are using the version <?php echo get_plugin_data(__FILE__)['Version'] ?> of the Ask Wordpress Plugin. View the code, documentation, and latest releases <a href="https://github.com/coralproject/ask-wp-plugin">here</a>.</p>
+
+  <?php }
+
+  public function base_url_callback($arguments) { ?>
+    <p>To use Ask forms in Wordpress, you will need to set a Form Base URL, which is where your forms are stored:</p>
+    <input style="width: 600px; height: 40px;" name="base_url" placeholder="<?php echo $arguments['placeholder']; ?>" id="base_url" type="url" value="<?php echo get_option( 'base_url' ); ?>" />
+  <?php }
 
 
-  public function admin_url_callback($arguments) {
-    echo '<input style="width: 600px; height: 40px;" name="admin_url" placeholder="'. $arguments['placeholder'] .'" id="admin_url" type="url" value="' . get_option( 'admin_url' ) . '" />';
-  }
+  public function admin_url_callback($arguments) { ?>
+    <p>You can also optionally manage your forms in Wordpress, by providing the URL where your Ask admin is located:</p>
+    <input style="width: 600px; height: 40px;" name="admin_url" placeholder="<?php echo $arguments['placeholder']; ?>" id="admin_url" type="url" value="<?php echo get_option( 'admin_url' ); ?>" />';
+  <?php }
 
   public function render_settings_page() { ?>
     <div class="wrap">
