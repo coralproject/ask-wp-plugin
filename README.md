@@ -17,39 +17,42 @@ Ask integrates seamless with Wordpress. Once you have Ask installed on your own 
 
 1. Download the ask-wp-plugin as a zip file by clicking 'Clone or Download' in the top right on this page, then 'Download Zip'
 
-![download](https://cloud.githubusercontent.com/assets/10014755/22115659/e3316790-de3b-11e6-9ee7-05b2df42826a.png)
-![download2](https://cloud.githubusercontent.com/assets/10014755/22115662/e51c0c04-de3b-11e6-8642-1a8e846467e3.png)
+  ![download](https://cloud.githubusercontent.com/assets/10014755/22115659/e3316790-de3b-11e6-9ee7-05b2df42826a.png)
+  ![download2](https://cloud.githubusercontent.com/assets/10014755/22115662/e51c0c04-de3b-11e6-8642-1a8e846467e3.png)
 
 2. Install and activate the plugin on your Wordpress site. [Go here to learn how to do that.](https://codex.wordpress.org/Plugins_Add_New_Screen)
+
 3. Click the 'Ask Forms' button on your WordPress menu.
 
-![askmenubutton](https://cloud.githubusercontent.com/assets/10014755/22117783/3ee66a70-de43-11e6-8ff1-b4597cf89bb2.png)
+  ![askmenubutton](https://cloud.githubusercontent.com/assets/10014755/22117783/3ee66a70-de43-11e6-8ff1-b4597cf89bb2.png)
 
 4. Create a form within Ask ([instructions here](https://docs.coralproject.net/products/askuserguide)) then click Publish Options 
+
 5. Copy and paste the start of the standalone URL before the long form ID number, and paste it into the Server Base URL
 
-![urlsetting](https://cloud.githubusercontent.com/assets/10014755/22117596/9894fa2e-de42-11e6-8cb1-cef57729feb3.png)
-![screen shot 2017-01-19 at 12 20 36 pm](https://cloud.githubusercontent.com/assets/10014755/22117676/d7b7a490-de42-11e6-9d26-b789af995f66.png)
+  ![urlsetting](https://cloud.githubusercontent.com/assets/10014755/22117596/9894fa2e-de42-11e6-8cb1-cef57729feb3.png)
+  ![screen shot 2017-01-19 at 12 20 36 pm](https://cloud.githubusercontent.com/assets/10014755/22117676/d7b7a490-de42-11e6-9d26-b789af995f66.png)
 
 6. If you'd like to use Ask entirely inside WordPress, paste the URL of your Ask install into the Admin Base URL field (not required)
 
-![screen shot 2017-01-19 at 12 29 34 pm](https://cloud.githubusercontent.com/assets/10014755/22117718/fad39786-de42-11e6-9d40-658ddcc4b215.png)
+  ![screen shot 2017-01-19 at 12 29 34 pm](https://cloud.githubusercontent.com/assets/10014755/22117718/fad39786-de42-11e6-9d40-658ddcc4b215.png)
 
-This will create a second menu item in your WordPress Ask Forms Menu.
+  This will create a second menu item in your WordPress Ask Forms Menu.
 
-![screen shot 2017-01-19 at 12 30 18 pm](https://cloud.githubusercontent.com/assets/10014755/22117789/46904e9e-de43-11e6-912c-2c9d3a8e1220.png)
+  ![screen shot 2017-01-19 at 12 30 18 pm](https://cloud.githubusercontent.com/assets/10014755/22117789/46904e9e-de43-11e6-912c-2c9d3a8e1220.png)
 
-Now you have Ask installed successfully in WordPress!
+  Now you have Ask installed successfully in WordPress!
 
 ### Publishing an Ask Form in WordPress
 
 1. Create an Ask form [instructions here](https://docs.coralproject.net/products/askuserguide), click on Publish Options, and copy the form id from the end of the standalone URL
-![url info](https://cloud.githubusercontent.com/assets/10014755/22114663/480dcc70-de38-11e6-8a25-44aead4a9e6d.png)
+  ![url info](https://cloud.githubusercontent.com/assets/10014755/22114663/480dcc70-de38-11e6-8a25-44aead4a9e6d.png)
 
 2. Write a shortcode using this format: `[ask-form id="your-form-id"]`, replacing "your-form-id" with that ID number. 
+
 3. Place the shortcode in any page or post where you'd like your Ask form to appear. 
 
-You can also publish the same form anywhere else, using iframe, script tag or standalone options, and responses will all go into the same submission manager.
+  You can also publish the same form anywhere else, using iframe, script tag or standalone options, and responses will all go into the same submission manager.
 
 
 ### Questions or Feedback?
