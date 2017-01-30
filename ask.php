@@ -2,11 +2,11 @@
   /*
   Plugin Name: Ask
   Plugin URI: https://coralproject.net
-  Description: a plugin for integrating ASK forms within wordpress
+  Description: A plugin to easily embed Ask Forms and Ask Galleries in Wordpress
   Version: 1.0
-  Author: Dan Zajdband
-  Author URI: https://zajdband.com
-  License: MIT
+  Author: The Coral Project
+  Author URI: https://coralproject.net
+  License: Apache 2.0
   */
 
 class Ask_Plugin {
