@@ -49,14 +49,16 @@ When you have Ask installed, follow these instructions:
 
 ### Publishing an Ask Form in WordPress
 
-1. Create an Ask form [instructions here](https://docs.coralproject.net/products/askuserguide), click on Publish Options, and copy the form id from the end of the standalone URL
-  ![url info](https://cloud.githubusercontent.com/assets/10014755/22114663/480dcc70-de38-11e6-8a25-44aead4a9e6d.png)
+1. Create an Ask form ([instructions here](https://docs.coralproject.net/products/askuserguide)), click on Publish Options, and click on WordPress shortcode ![wordpress1](https://cloud.githubusercontent.com/assets/10014755/22442376/2353d13e-e709-11e6-89b0-2f5e6035f666.png)
 
-2. Write a shortcode using this format: `[ask-form id="your-form-id"]`, replacing "your-form-id" with that ID number. 
+2. Copy the shortcode and paste it into your WordPress post/page wherever you would like the form to appear. 
+![wordpress2](https://cloud.githubusercontent.com/assets/10014755/22442416/495173a0-e709-11e6-82ac-02cbcc19f004.png)
 
-3. Place the shortcode in any page or post where you'd like your Ask form to appear. 
 
-  You can also publish the same form anywhere else, using iframe, script tag or standalone options, and responses will all go into the same submission manager.
+You can publish the form anywhere else, using iframe, script tag or standalone options, and responses will go into the same submission manager.
+
+The same option is available for the Gallery. 
+![wordpress3](https://cloud.githubusercontent.com/assets/10014755/22442434/630834f0-e709-11e6-8560-f442587713fa.png)
 
 
 ### Questions or Feedback?
