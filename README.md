@@ -1,4 +1,4 @@
-# Ask Wordpress Plugin
+# Ask WordPress Plugin
 
 ### About Ask
 
@@ -11,9 +11,13 @@ You can find out how to install and manage Ask here: https://docs.coralproject.n
 Ask is an open source product brought to you by The Coral Project. Find out more about Coral and the tools we build here: https://coralproject.net 
 
 
-### Installing the Ask Wordpress Plugin
+### Installing the Ask WordPress Plugin
 
-Ask integrates seamless with Wordpress. Once you have Ask installed on your own infrastructure (see: https://github.com/coralproject/ask-install), follow these steps:
+Ask integrates seamless with WordPress. 
+
+First, you have to install Ask on a server, so that the admin and user data can be stored. For install information see https://docs.coralproject.net/products/ask/, and email jeff@mozillafoundation.org if you have any questions. 
+
+When you have Ask installed, follow these instructions:
 
 1. Download the ask-wp-plugin as a zip file by clicking 'Clone or Download' in the top right on this page, then 'Download Zip'
 
