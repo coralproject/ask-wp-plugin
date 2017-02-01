@@ -2,7 +2,7 @@
 
 ### About Ask
 
-Ask is a form tool, built specifically for journalists.
+Ask is a form tool, built specifically for journalists. [Read about it here.](https://coralproject.net/products/ask.html)
 
 Ask lets you easily create embeddable forms, manage submissions, and display galleries of the best responses. It’s fast, flexible, and you control the design and the data.
 
