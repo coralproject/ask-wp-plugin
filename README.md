@@ -24,7 +24,7 @@ When you have Ask installed, follow these instructions:
   ![download](https://cloud.githubusercontent.com/assets/10014755/22115659/e3316790-de3b-11e6-9ee7-05b2df42826a.png)
   ![download2](https://cloud.githubusercontent.com/assets/10014755/22115662/e51c0c04-de3b-11e6-8642-1a8e846467e3.png)
 
-2. Install and activate the plugin on your Wordpress site. [Go here to learn how to do that.](https://codex.wordpress.org/Plugins_Add_New_Screen)
+2. Install and activate the plugin on your WordPress site. [Go here to learn how to do that.](https://codex.wordpress.org/Plugins_Add_New_Screen)
 
 3. Click the 'Ask Forms' button on your WordPress menu.
 
