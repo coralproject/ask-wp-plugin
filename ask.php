@@ -130,5 +130,3 @@ class Ask_Plugin {
 }
 
 new Ask_Plugin();
-
-?>
