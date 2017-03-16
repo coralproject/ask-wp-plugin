@@ -119,7 +119,7 @@ class Ask_Plugin {
 		<h2>Ask Settings</h2>
 		<p>Questions/feedback? Reach out to us on <a href="https://twitter.com/coralproject">Twitter</a> or join our
 			<a href="https://community.coralproject.net/">Community</a>.
-		<p>You are using the version <?php echo get_plugin_data( __FILE__ )['Version'] ?> of the Ask WordPress Plugin. View the code, documentation, and latest releases
+		<p>You are using the version <?php echo esc_html( get_plugin_data( __FILE__ )['Version'] ); ?> of the Ask WordPress Plugin. View the code, documentation, and latest releases
 			<a href="https://github.com/coralproject/ask-wp-plugin">here</a>.</p>
 
 	<?php }
@@ -133,7 +133,7 @@ class Ask_Plugin {
 	 */
 	public function base_url_callback( $arguments ) { ?>
 		<p>To use Ask forms in WordPress, you will need to set a Form Base URL, which is where your forms are stored:</p>
-		<input style="width: 600px; height: 40px;" name="base_url" placeholder="<?php echo $arguments['placeholder']; ?>" id="base_url" type="url" value="<?php echo get_option( 'base_url' ); ?>" />
+		<input style="width: 600px; height: 40px;" name="base_url" placeholder="<?php echo esc_attr( $arguments['placeholder'] ); ?>" id="base_url" type="url" value="<?php echo esc_url( get_option( 'base_url' ) ); ?>" />
 	<?php }
 
 
@@ -146,7 +146,7 @@ class Ask_Plugin {
 	 */
 	public function admin_url_callback( $arguments ) { ?>
 		<p>You can also optionally manage your forms in WordPress, by providing the URL where your Ask admin is located:</p>
-		<input style="width: 600px; height: 40px;" name="admin_url" placeholder="<?php echo $arguments['placeholder']; ?>" id="admin_url" type="url" value="<?php echo get_option( 'admin_url' ); ?>" />
+		<input style="width: 600px; height: 40px;" name="admin_url" placeholder="<?php echo esc_attr( $arguments['placeholder'] ); ?>" id="admin_url" type="url" value="<?php echo esc_url( get_option( 'admin_url' ) ); ?>" />
 	<?php }
 
 	/**
@@ -175,7 +175,7 @@ class Ask_Plugin {
 	public function render_admin_page() { ?>
 		<div class="wrap">
 			<h2>Ask Admin</h2>
-			<iframe width="100%" height="600px" src="<?php echo get_option( 'admin_url' ); ?>" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0"></iframe>
+			<iframe width="100%" height="600px" src="<?php echo esc_url( get_option( 'admin_url' ) ); ?>" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0"></iframe>
 		</div>
 	<?php }
 
@@ -198,9 +198,9 @@ class Ask_Plugin {
 		$height = isset( $attrs['height'] ) ? $attrs['height'] : '580';
 		$id     = isset( $attrs['id'] ) ? $attrs['id'] : '';
 		if ( isset( $attrs['iframe'] ) && $attrs['iframe'] == 'true' ) {
-			return '<iframe width="100%" height="' . $height . '" src="' . get_option( 'base_url' ) . sanitize_text_field( $attrs['id'] ) . '.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0"></iframe>';
+			return '<iframe width="100%" height="' . absint( $height ) . '" src="' . esc_url( get_option( 'base_url' ) ) . sanitize_text_field( $attrs['id'] ) . '.html" frameborder="0" hspace="0" vspace="0" marginheight="0" marginwidth="0"></iframe>';
 		} else {
-			return '<div id="ask-' . $type . '"></div><script src="' . get_option( 'base_url' ) . sanitize_text_field( $id ) . '.js"></script>';
+			return '<div id="ask-' . esc_attr( $type ) . '"></div><script src="' . esc_url( get_option( 'base_url' ) ) . sanitize_text_field( $id ) . '.js"></script>';
 		}
 	}
 
