@@ -61,7 +61,5 @@ The same option is available for the Gallery.
 ![wordpress3](https://cloud.githubusercontent.com/assets/10014755/22442434/630834f0-e709-11e6-8560-f442587713fa.png)
 
 
-### Questions or Feedback?
 
-File an issue here, or email jeff@mozillafoundation.org
 
